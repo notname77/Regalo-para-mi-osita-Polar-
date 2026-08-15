@@ -1,84 +1,347 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para mi amor ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #ffe6f0;
-            color: #5a2942;
-            text-align: center;
-        }
+<title>Para mi Osita Polar ❤️</title>
 
-        .pantalla {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 25px;
-            box-sizing: border-box;
-        }
+<style>
 
-        h1 {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
+* {
+    box-sizing: border-box;
+}
 
-        p {
-            font-size: 18px;
-            line-height: 1.5;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #fff0f6);
+    color: #6b2948;
+    text-align: center;
+}
 
-        button {
-            border: none;
-            border-radius: 25px;
-            padding: 15px 25px;
-            margin: 10px;
-            font-size: 17px;
-            cursor: pointer;
-            background: #ff6f9f;
-            color: white;
-        }
+.pantalla {
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-        button:hover {
-            transform: scale(1.05);
-        }
+.oculto {
+    display: none;
+}
 
-        .oculto {
-            display: none;
-        }
+.corazon {
+    font-size: 75px;
+    animation: latido 1.2s infinite;
+}
 
-        .corazon {
-            font-size: 70px;
-            animation: latido 1.2s infinite;
-        }
+h1 {
+    font-size: 32px;
+    margin: 15px 0;
+}
 
-        @keyframes latido {
-            0%, 100% {
-                transform: scale(1);
-            }
+h2 {
+    font-size: 25px;
+}
 
-            50% {
-                transform: scale(1.15);
-            }
-        }
-    </style>
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+button {
+    background: #ff6b9d;
+    color: white;
+    border: none;
+    padding: 15px 28px;
+    margin: 10px;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+.tarjeta {
+    background: rgba(255,255,255,0.8);
+    padding: 30px;
+    border-radius: 25px;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.fotos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.fotos img {
+    width: 140px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+@keyframes latido {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.pantalla:not(.oculto) {
+    animation: aparecer 0.7s ease;
+}
+
+</style>
 </head>
 
 <body>
 
-    <!-- PRIMERA PANTALLA -->
-    <div id="inicio" class="pantalla">
+<!-- INICIO -->
 
-        <div class="corazon">❤️</div>
+<div id="inicio" class="pantalla">
 
-        <h1>Hola, mi amor</h1>
+    <div class="corazon">❤️</div>
+
+    <div class="tarjeta">
+
+        <h1>Hola, mi Osita Polar 🐻‍❄️❤️</h1>
 
         <p>
-            Hice algo especial para ti.
-            <
+            Preparé algo especialmente para ti.
+        </p>
+
+        <p>
+            Pero antes de comenzar...
+            <br>
+            ¿quieres descubrir tu sorpresa?
+        </p>
+
+        <button onclick="mostrarOpciones()">
+            Sí, quiero verla 💗
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- OPCIONES -->
+
+<div id="opciones" class="pantalla oculto">
+
+    <div class="tarjeta">
+
+        <h1>Elige una opción 💕</h1>
+
+        <p>
+            Hay varias cositas preparadas para ti.
+        </p>
+
+        <button onclick="mostrarVideo()">
+            🎥 Quiero ver el video
+        </button>
+
+        <button onclick="mostrarFotos()">
+            📸 Quiero ver nuestros recuerdos
+        </button>
+
+        <button onclick="mostrarCarta()">
+            💌 Quiero leer algo
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- VIDEO -->
+
+<div id="video" class="pantalla oculto">
+
+    <div class="tarjeta">
+
+        <h1>Un video para ti 🎥❤️</h1>
+
+        <p>
+            Porque hay cosas que a veces una canción
+            puede decir mejor que nosotros.
+        </p>
+
+        <button onclick="abrirYouTube()">
+            ▶️ Ver video
+        </button>
+
+        <br>
+
+        <button onclick="volverOpciones()">
+            💗 Regresar
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- FOTOS -->
+
+<div id="fotos" class="pantalla oculto">
+
+    <div class="tarjeta">
+
+        <h1>Nuestros recuerdos 📸❤️</h1>
+
+        <p>
+            Cada foto guarda un momento que quiero conservar contigo.
+        </p>
+
+        <div class="fotos">
+
+            <img src="foto1.jpg">
+            <img src="foto2.jpg">
+            <img src="foto3.jpg">
+            <img src="foto4.jpg">
+
+        </div>
+
+        <button onclick="volverOpciones()">
+            💗 Regresar
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- CARTA -->
+
+<div id="carta" class="pantalla oculto">
+
+    <div class="tarjeta">
+
+        <div class="corazon">💗</div>
+
+        <h1>Para ti</h1>
+
+        <p>
+            Quiero que sepas que eres una persona
+            muy especial para mí.
+        </p>
+
+        <p>
+            Gracias por cada momento, cada sonrisa
+            y cada recuerdo que hemos construido juntos.
+        </p>
+
+        <p>
+            Espero que esta pequeña sorpresa
+            te recuerde lo mucho que te quiero.
+        </p>
+
+        <h2>
+            Te quiero muchísimo ❤️
+        </h2>
+
+        <button onclick="volverOpciones()">
+            ↩️ Regresar
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function ocultarTodo() {
+
+    document.getElementById("inicio").classList.add("oculto");
+    document.getElementById("opciones").classList.add("oculto");
+    document.getElementById("video").classList.add("oculto");
+    document.getElementById("fotos").classList.add("oculto");
+    document.getElementById("carta").classList.add("oculto");
+
+}
+
+function mostrarOpciones() {
+
+    ocultarTodo();
+
+    document.getElementById("opciones").classList.remove("oculto");
+
+}
+
+function mostrarVideo() {
+
+    ocultarTodo();
+
+    document.getElementById("video").classList.remove("oculto");
+
+}
+
+function mostrarFotos() {
+
+    ocultarTodo();
+
+    document.getElementById("fotos").classList.remove("oculto");
+
+}
+
+function mostrarCarta() {
+
+    ocultarTodo();
+
+    document.getElementById("carta").classList.remove("oculto");
+
+}
+
+function volverOpciones() {
+
+    mostrarOpciones();
+
+}
+
+function abrirYouTube() {
+
+    window.open(
+        "https://www.youtube.com/",
+        "_blank"
+    );
+
+}
+
+</script>
+
+</body>
+</html>
