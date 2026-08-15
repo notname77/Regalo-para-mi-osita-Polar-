@@ -5,14 +5,15 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Para mi Osita Polar ❤️</title>
 
 <style>
 
 /* =========================
-   CONFIGURACIÓN GENERAL
+   GENERAL
 ========================= */
 
 * {
@@ -25,18 +26,24 @@ body {
 
     font-family: Georgia, "Times New Roman", serif;
 
-    background:
-        linear-gradient(
-            135deg,
-            #ffd9e8,
-            #fff7fb
-        );
-
-    color: #702b4c;
+    color: #111111;
 
     text-align: center;
 
     overflow-x: hidden;
+
+    background:
+        linear-gradient(
+            rgba(255, 225, 238, 0.72),
+            rgba(255, 240, 247, 0.72)
+        ),
+        url("fondo-pusheen.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-attachment: fixed;
 
 }
 
@@ -83,20 +90,28 @@ body {
     padding: 30px 22px;
 
     background:
-        rgba(255,255,255,0.88);
+        rgba(255,255,255,0.90);
 
     border-radius: 30px;
 
     box-shadow:
         0 10px 35px
-        rgba(100,30,60,0.18);
+        rgba(0,0,0,0.18);
 
 }
 
 
 /* =========================
-   TEXTOS
+   TEXTOS NEGROS
 ========================= */
+
+h1,
+h2,
+p {
+
+    color: #111111;
+
+}
 
 h1 {
 
@@ -251,7 +266,7 @@ button:hover {
     box-shadow:
         inset 0 0 0 3px #fff,
         0 10px 25px
-        rgba(100,30,60,0.15);
+        rgba(0,0,0,0.15);
 
 }
 
@@ -275,9 +290,6 @@ button:hover {
         );
 
 }
-
-
-/* posiciones de los lirios */
 
 .lirio-arriba-izq {
 
@@ -377,8 +389,6 @@ button:hover {
 
     text-align: left;
 
-    white-space: normal;
-
 }
 
 .carta-titulo {
@@ -389,6 +399,8 @@ button:hover {
 
     margin-bottom: 30px;
 
+    color: #111111;
+
 }
 
 .carta p {
@@ -398,6 +410,8 @@ button:hover {
     line-height: 1.9;
 
     margin-bottom: 25px;
+
+    color: #111111;
 
 }
 
@@ -410,6 +424,41 @@ button:hover {
     font-weight: bold;
 
     margin-top: 35px;
+
+}
+
+
+/* =========================
+   MENSAJE FINAL
+========================= */
+
+.mensaje-final {
+
+    text-align: center;
+
+}
+
+.mensaje-final h1 {
+
+    font-size: 30px;
+
+}
+
+.mensaje-final p {
+
+    font-size: 19px;
+
+    line-height: 1.9;
+
+}
+
+.firma-final {
+
+    margin-top: 30px;
+
+    font-size: 21px;
+
+    font-weight: bold;
 
 }
 
@@ -458,7 +507,6 @@ button:hover {
 
 }
 
-
 @keyframes aparecer {
 
     from {
@@ -480,7 +528,6 @@ button:hover {
     }
 
 }
-
 
 @keyframes subir {
 
@@ -547,463 +594,593 @@ button:hover {
 <body>
 
 
-<!-- ==================================
+<!-- =========================
      INICIO
-================================== -->
+========================= -->
 
 <div
-    id="inicio"
-    class="pantalla">
+id="inicio"
+class="pantalla">
 
-    <div class="corazon">
-        ❤️
-    </div>
+<div class="corazon">
+❤️
+</div>
 
-    <div class="tarjeta">
+<div class="tarjeta">
 
-        <h1>
-            Hola, mi Osita Polar 🐻‍❄️❤️
-        </h1>
+<h1>
+Hola, mi Osita Polar 🐻‍❄️❤️
+</h1>
 
-        <p>
-            Preparé algo especialmente para ti.
-        </p>
+<p>
+Preparé algo especialmente para ti.
+</p>
 
-        <p>
-            Pero antes de comenzar...
-        </p>
+<p>
+Pero antes de comenzar...
+</p>
 
-        <h2>
-            ¿Quieres descubrir tu sorpresa? 💕
-        </h2>
+<h2>
+¿Quieres descubrir tu sorpresa? 💕
+</h2>
 
-        <button
-            onclick="mostrarOpciones()">
+<button
+onclick="mostrarOpciones()">
 
-            Sí, quiero verla ❤️
+Sí, quiero verla ❤️
 
-        </button>
+</button>
 
-    </div>
+</div>
 
 </div>
 
 
-<!-- ==================================
+<!-- =========================
      OPCIONES
-================================== -->
+========================= -->
 
 <div
-    id="opciones"
-    class="pantalla oculto">
+id="opciones"
+class="pantalla oculto">
 
-    <div class="tarjeta">
+<div class="tarjeta">
 
-        <h1>
-            Tengo algo para ti 💗
-        </h1>
+<h1>
+Tengo algo para ti 💗
+</h1>
 
-        <p>
-            Elige qué quieres descubrir primero.
-        </p>
+<p>
+Elige qué quieres descubrir primero.
+</p>
 
-        <button
-            onclick="mostrarVideo()">
+<button
+onclick="mostrarVideo()">
 
-            🎥 Una canción para ti
+🎥 Un video para ti
 
-        </button>
+</button>
 
-        <button
-            onclick="mostrarFotos()">
+<button
+onclick="mostrarFotos()">
 
-            📸 Nuestros recuerdos
+📸 Nuestros recuerdos
 
-        </button>
+</button>
 
-        <button
-            onclick="mostrarCarta()">
+<button
+onclick="mostrarCarta()">
 
-            💌 Una linda carta
+💌 Una pequeña carta
 
-        </button>
+</button>
 
-    </div>
+</div>
 
 </div>
 
 
-<!-- ==================================
+<!-- =========================
      VIDEO
-================================== -->
+========================= -->
 
 <div
-    id="video"
-    class="pantalla oculto">
+id="video"
+class="pantalla oculto">
 
-    <div class="tarjeta">
+<div class="tarjeta">
 
-        <h1>
-            Este video es para ti 🎥❤️
-        </h1>
+<h1>
+Este video es para ti 🎥❤️
+</h1>
 
-        <p>
-            Quiero que lo veas aquí mismo.
-        </p>
+<p>
+Quiero que lo veas aquí mismo.
+</p>
 
+<div class="video-contenedor">
 
-        <div class="video-contenedor">
+<iframe
 
-            <iframe
+src="https://www.youtube.com/embed/rzN_oJh_YPo?playsinline=1"
 
-                src="https://www.youtube.com/embed/rzN_oJh_YPo?playsinline=1"
+title="Video para mi Osita Polar"
 
-                title="Video para mi Osita Polar"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
 
-                allowfullscreen>
+</iframe>
 
-            </iframe>
+</div>
 
-        </div>
+<button
+onclick="videoVisto()">
 
+↩️ Regresar
 
-        <button
-            onclick="volverOpciones()">
+</button>
 
-            ↩️ Regresar
-
-        </button>
-
-    </div>
+</div>
 
 </div>
 
 
-<!-- ==================================
+<!-- =========================
      FOTOS
-================================== -->
+========================= -->
 
 <div
-    id="fotos"
-    class="pantalla oculto">
+id="fotos"
+class="pantalla oculto">
 
-    <div class="tarjeta">
+<div class="tarjeta">
 
-        <h1>
-            Nuestros recuerdos 📸❤️
-        </h1>
+<h1>
+Nuestros recuerdos 📸❤️
+</h1>
 
-        <p>
-            Algunos de mis momentos favoritos contigo.
-        </p>
+<p>
+Algunos de mis momentos favoritos contigo.
+</p>
 
-
-        <div class="marco-fotos">
-
-
-            <!-- LIRIOS -->
-
-            <div class="lirio lirio-arriba-izq">
-                🌷
-            </div>
-
-            <div class="lirio lirio-arriba-der">
-                🌷
-            </div>
-
-            <div class="lirio lirio-abajo-izq">
-                🌷
-            </div>
-
-            <div class="lirio lirio-abajo-der">
-                🌷
-            </div>
+<div class="marco-fotos">
 
 
-            <!-- FOTOS -->
+<div class="lirio lirio-arriba-izq">
+🌷
+</div>
 
-            <div class="fotos">
+<div class="lirio lirio-arriba-der">
+🌷
+</div>
 
-                <img
-                    src="foto1.jpg"
-                    alt="Nuestro recuerdo 1">
+<div class="lirio lirio-abajo-izq">
+🌷
+</div>
 
-                <img
-                    src="foto2.jpg"
-                    alt="Nuestro recuerdo 2">
-
-                <img
-                    src="foto3.jpg"
-                    alt="Nuestro recuerdo 3">
-
-                <img
-                    src="foto4.jpg"
-                    alt="Nuestro recuerdo 4">
-
-            </div>
-
-        </div>
+<div class="lirio lirio-abajo-der">
+🌷
+</div>
 
 
-        <button
-            onclick="volverOpciones()">
+<div class="fotos">
 
-            ↩️ Regresar
+<img
+src="foto1.jpg"
+alt="Nuestro recuerdo 1">
 
-        </button>
+<img
+src="foto2.jpg"
+alt="Nuestro recuerdo 2">
 
-    </div>
+<img
+src="foto3.jpg"
+alt="Nuestro recuerdo 3">
+
+<img
+src="foto4.jpg"
+alt="Nuestro recuerdo 4">
+
+</div>
 
 </div>
 
 
-<!-- ==================================
+<button
+onclick="fotosVistas()">
+
+↩️ Regresar
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- =========================
      CARTA
-================================== -->
+========================= -->
 
 <div
-    id="carta"
-    class="pantalla oculto">
+id="carta"
+class="pantalla oculto">
 
-    <div class="tarjeta carta">
+<div class="tarjeta carta">
 
+<div class="corazon">
+❤️
+</div>
 
-        <div class="corazon">
-
-            ❤️
-
-        </div>
-
-
-        <div class="carta-titulo">
-
-            Solo Tú..
-
-        </div>
+<div class="carta-titulo">
+Solo Tú..
+</div>
 
 
-        <p>
+<p>
 
-            No existió un ayer que borrará tu nombre,
-            ni existirá un mañana en el que cambié
-            lo que siento.
+No existió un ayer que borrará tu nombre,
+ni existirá un mañana en el que cambié
+lo que siento.
 
-            <br><br>
+<br><br>
 
-            No quiero otra mirada,
-            porque en tus ojos encontré mi universo.
+No quiero otra mirada,
+porque en tus ojos encontré mi universo.
 
-        </p>
-
-
-        <p>
-
-            No me interesa otro abrazo,
-            si el único que calma mi alma es el tuyo,
-
-            <br><br>
-
-            No necesito buscar otro camino,
-            porque mi destino siempre termina contigo.
-
-        </p>
+</p>
 
 
-        <p>
+<p>
 
-            No cambiaría tu amor por ninguna promesa,
-            ni dedicaría mi tiempo en un corazón ajeno,
+No me interesa otro abrazo,
+si el único que calma mi alma es el tuyo,
 
-            <br><br>
+<br><br>
 
-            Mis pensamientos llevan tu nombre,
-            y mis sueños te tienen de dueña.
+No necesito buscar otro camino,
+porque mi destino siempre termina contigo.
 
-        </p>
-
-
-        <p>
-
-            Si algun día me preguntas cuánto te amo,
-            no busques respuesta en las palabras.
-
-            <br><br>
-
-            Mira en mis acciones,
-            en mi lealtad y en la forma
-            en la que deseo quedarme a tu lado.
-
-        </p>
+</p>
 
 
-        <p>
+<p>
 
-            Porque para mí no existe otra,
-            no quiero, no amaré otra.
+No cambiaría tu amor por ninguna promesa,
+ni dedicaría mi tiempo en un corazón ajeno,
 
-            <br><br>
+<br><br>
 
-            Mi corazón hizo su elección
-            desde el día que te conocí.....
+Mis pensamientos llevan tu nombre,
+y mis sueños te tienen de dueña.
 
-        </p>
-
-
-        <p class="firma">
-
-            Siempre seré el hombre
-            que más te amo ♡♡
-
-        </p>
+</p>
 
 
-        <button
-            onclick="volverOpciones()">
+<p>
 
-            ↩️ Regresar
+Si algun día me preguntas cuánto te amo,
+no busques respuesta en las palabras.
 
-        </button>
+<br><br>
 
-    </div>
+Mira en mis acciones,
+en mi lealtad y en la forma
+en la que deseo quedarme a tu lado.
+
+</p>
+
+
+<p>
+
+Porque para mí no existe otra,
+no quiero, no amaré otra.
+
+<br><br>
+
+Mi corazón hizo su elección
+desde el día que te conocí.....
+
+</p>
+
+
+<p class="firma">
+
+Siempre seré el hombre
+que más te amo ♡♡
+
+</p>
+
+
+<button
+onclick="cartaVista()">
+
+↩️ Regresar
+
+</button>
+
+</div>
 
 </div>
 
 
-<!-- ==================================
+<!-- =========================
+     MENSAJE FINAL
+========================= -->
+
+<div
+id="final"
+class="pantalla oculto">
+
+<div class="tarjeta mensaje-final">
+
+<div class="corazon">
+🐻‍❄️❤️
+</div>
+
+<h1>
+Confía en ti, mi Osita ❤️
+</h1>
+
+<p>
+
+Eres muy capaz y quiero que esto sea
+un recordatorio de lo seguro que estoy
+en ti, que lograrás aprobar tu examen.
+
+</p>
+
+<p>
+
+Y de no ser así, también buscarás opciones
+en las cuales yo estaré a tu lado,
+acompañándote.
+
+</p>
+
+<p>
+
+No importa cuál sea el resultado,
+yo voy a estar contigo.
+
+</p>
+
+<p>
+
+Te amo infinitamente mucho mucho mucho ♡
+
+</p>
+
+<p class="firma-final">
+
+Att: tu oso polar 🐻‍❄️❤️
+
+</p>
+
+</div>
+
+</div>
+
+
+<!-- =========================
      JAVASCRIPT
-================================== -->
+========================= -->
 
 <script>
 
 
+/* CONTROL DE LO QUE YA VIO */
+
+let videoVistoEstado = false;
+
+let fotosVistasEstado = false;
+
+let cartaVistaEstado = false;
+
+
+/* OCULTAR TODO */
+
 function ocultarTodo() {
 
-    document
-        .getElementById("inicio")
-        .classList
-        .add("oculto");
+document
+.getElementById("inicio")
+.classList
+.add("oculto");
 
-    document
-        .getElementById("opciones")
-        .classList
-        .add("oculto");
+document
+.getElementById("opciones")
+.classList
+.add("oculto");
 
-    document
-        .getElementById("video")
-        .classList
-        .add("oculto");
+document
+.getElementById("video")
+.classList
+.add("oculto");
 
-    document
-        .getElementById("fotos")
-        .classList
-        .add("oculto");
+document
+.getElementById("fotos")
+.classList
+.add("oculto");
 
-    document
-        .getElementById("carta")
-        .classList
-        .add("oculto");
+document
+.getElementById("carta")
+.classList
+.add("oculto");
+
+document
+.getElementById("final")
+.classList
+.add("oculto");
 
 }
 
+
+/* OPCIONES */
 
 function mostrarOpciones() {
 
-    ocultarTodo();
+ocultarTodo();
 
-    document
-        .getElementById("opciones")
-        .classList
-        .remove("oculto");
+document
+.getElementById("opciones")
+.classList
+.remove("oculto");
 
 }
 
+
+/* VIDEO */
 
 function mostrarVideo() {
 
-    ocultarTodo();
+ocultarTodo();
 
-    document
-        .getElementById("video")
-        .classList
-        .remove("oculto");
+document
+.getElementById("video")
+.classList
+.remove("oculto");
 
 }
 
+
+/* FOTOS */
 
 function mostrarFotos() {
 
-    ocultarTodo();
+ocultarTodo();
 
-    document
-        .getElementById("fotos")
-        .classList
-        .remove("oculto");
+document
+.getElementById("fotos")
+.classList
+.remove("oculto");
 
 }
 
+
+/* CARTA */
 
 function mostrarCarta() {
 
-    ocultarTodo();
+ocultarTodo();
 
-    document
-        .getElementById("carta")
-        .classList
-        .remove("oculto");
-
-}
-
-
-function volverOpciones() {
-
-    mostrarOpciones();
+document
+.getElementById("carta")
+.classList
+.remove("oculto");
 
 }
 
 
-/* CORAZONES */
+/* VIDEO VISTO */
+
+function videoVisto() {
+
+videoVistoEstado = true;
+
+comprobarFinal();
+
+}
+
+
+/* FOTOS VISTAS */
+
+function fotosVistas() {
+
+fotosVistasEstado = true;
+
+comprobarFinal();
+
+}
+
+
+/* CARTA VISTA */
+
+function cartaVista() {
+
+cartaVistaEstado = true;
+
+comprobarFinal();
+
+}
+
+
+/* COMPROBAR SI YA VIO TODO */
+
+function comprobarFinal() {
+
+if (
+
+videoVistoEstado &&
+fotosVistasEstado &&
+cartaVistaEstado
+
+) {
+
+mostrarFinal();
+
+} else {
+
+mostrarOpciones();
+
+}
+
+}
+
+
+/* MOSTRAR MENSAJE FINAL */
+
+function mostrarFinal() {
+
+ocultarTodo();
+
+document
+.getElementById("final")
+.classList
+.remove("oculto");
+
+}
+
+
+/* CORAZONES FLOTANTES */
 
 setInterval(
 
-    function() {
+function() {
 
-        let corazon =
-            document.createElement("div");
+let corazon =
+document.createElement("div");
 
-        corazon.className =
-            "corazon-flotante";
+corazon.className =
+"corazon-flotante";
 
-        corazon.innerHTML =
-            "❤️";
+corazon.innerHTML =
+"❤️";
 
-        corazon.style.left =
-            Math.random() * 100 + "%";
+corazon.style.left =
+Math.random() * 100 + "%";
 
-        document.body.appendChild(
-            corazon
-        );
+document.body.appendChild(
+corazon
+);
 
+setTimeout(
 
-        setTimeout(
+function() {
 
-            function() {
+corazon.remove();
 
-                corazon.remove();
+},
 
-            },
-
-            6000
-
-        );
-
-    },
-
-    900
+6000
 
 );
 
+},
+
+900
+
+);
 
 </script>
 
